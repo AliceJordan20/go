@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar  3 05:33:26 2017
+
+@author: michal
+"""
+from matplotlib import rc
+rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+## for Palatino and other serif fonts use:
+#rc('font',**{'family':'serif','serif':['Palatino']})
+rc('text', usetex=True)
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+data = np.array(np.genfromtxt("/home/michal/Desktop/Final Year project/raw data/datasetH.csv",delimiter=","))
+
+
+#phi b is 2
+#pt b is 1
+#phi bbar is 9
+#pt bbar is 8
+#phi H is 16
+#pt H is 15
+
+    
+
+netPT=[]
+for i in data:
+    netPT.append( i[3]**2+i[4]**2-i[1]**2)
+
